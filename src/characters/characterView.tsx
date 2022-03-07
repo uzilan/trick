@@ -1,28 +1,24 @@
 import './characters.css'
-import Navigation from "../Navigation";
 import CharacterModel from "../character/characterModel";
+import { Link } from "react-router-dom";
 
 interface Props {
 	character: CharacterModel
-	setNavigation: (navigation: Navigation) => void
 }
 
-export default function CharacterView({ character, setNavigation }: Props) {
-
-	function nav() {
-		setNavigation({ page: "character", args: { characterId: character.id } })
-	}
+export default function CharacterView({ character }: Props) {
 
 	return (
+
 		<div key={character.id} className="character">
-			<a onClick={nav} href="javascript:void(0)">
+			<Link to={{ pathname: "/character/" + character.id }}>
 				<p>
 					<img src={character.image} alt={character.name}/>
 				</p>
 				<p>
 					{character.name}
 				</p>
-			</a>
+			</Link>
 		</div>
 	);
 }

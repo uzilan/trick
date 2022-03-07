@@ -1,18 +1,14 @@
 import CharacterModel from "./characterModel";
 import "./character.css"
-import Navigation from "../Navigation";
+import { Link } from "react-router-dom";
 
 interface Props {
 	characterModel: CharacterModel
-	setNavigation: (navigation: Navigation) => void
 }
 
-export default function CharacterView({ characterModel, setNavigation }: Props) {
-	function nav() {
-		setNavigation({ page: "characters", args: {} })
-	}
-// debugger
-	const episodes = characterModel.episode.map(ep=> ep.name).join(", ");
+export default function CharacterView({ characterModel }: Props) {
+
+	const episodes = characterModel.episode.map(ep => ep.name).join(", ");
 
 	return (
 		<div>
@@ -42,7 +38,7 @@ export default function CharacterView({ characterModel, setNavigation }: Props) 
 					<td className="left">{episodes}</td>
 				</tr>
 			</table>
-			<a onClick={nav} href="javascript:void(0)">Back to all characters</a>
+			<Link to="/portal">Back</Link>
 		</div>
 	)
 }
