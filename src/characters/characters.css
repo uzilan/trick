@@ -1,0 +1,7 @@
+.characters-list {
+    display: flex;
+}
+
+.character {
+    padding-right:5px;
+}
