@@ -1,4 +1,5 @@
 import Episode from "../episode/episodeModel";
+import EpisodeModel from "../episode/episodeModel";
 
 export default interface CharacterModel {
 	id: number
@@ -10,5 +11,5 @@ export default interface CharacterModel {
 	// origin: Location
 	// location: Location
 	image: string
-	episode: Episode[]
+	episode: EpisodeModel[]
 }

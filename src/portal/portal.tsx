@@ -1,7 +1,11 @@
 import Characters from "../characters/characters";
+import Episodes from "../episodes/episodes";
 
 export default function Portal() {
 	return (
-		<Characters/>
+		<div>
+			<Characters/>
+			<Episodes/>
+		</div>
 	)
 }

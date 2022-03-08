@@ -8,7 +8,7 @@ const characterQuery = gql`
         character(id: $id) {
             id, name, status, species, type, gender, image,
             episode {
-                name
+                id, name, episode
             }
         }
     }

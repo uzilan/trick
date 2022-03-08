@@ -6,12 +6,12 @@ interface Props {
 	character: CharacterModel
 }
 
-export default function CharacterView({ character }: Props) {
+export default function CharacterPreview({ character }: Props) {
 
 	return (
 
 		<div key={character.id} className="character">
-			<Link to={{ pathname: "/character/" + character.id }}>
+			<Link to={`/character/${character.id}`}>
 				<p>
 					<img src={character.image} alt={character.name}/>
 				</p>

@@ -27,7 +27,7 @@ export default function Characters() {
 		},
 	})
 
-	if (loading) return <p>Loading...</p>;
+	if (loading) return <p>Loading characters...</p>;
 	if (error) return <p>Error :(</p>;
 
 	if (chars.length === 0) {
@@ -35,7 +35,7 @@ export default function Characters() {
 	}
 
 	return (
-		<CharactersView characters={chars} next={() => {
+		<CharactersView characters={chars} showNext={true} next={() => {
 			fetchMore({
 					variables: {
 						page: data.characters.info.next,

@@ -1,8 +1,10 @@
-export default interface  Episode {
+import CharacterModel from "../character/characterModel";
+
+export default interface EpisodeModel {
 	id: string
 	name: string
 	air_date: string
 	episode: string
-	// characters: [Character]!
+	characters: CharacterModel[]
 	created: String
 }

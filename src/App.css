@@ -4,3 +4,25 @@
   margin: 0;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.episode-link {
+  padding-right: 10px;
+}
+
+.padded {
+  padding-left: 50px;
+  padding-right: 50px;
+}

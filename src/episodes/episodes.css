@@ -1,0 +1,8 @@
+.episodes-list {
+    padding-top: 10px;
+    display: inline-flex;
+}
+
+.season {
+    text-align: left;
+}
