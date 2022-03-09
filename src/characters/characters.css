@@ -1,7 +1,7 @@
 .characters-list {
     display: flex;
     overflow-x: scroll;
-    width: calc(100vw );
+    width: calc(100vw);
 }
 
 .character {

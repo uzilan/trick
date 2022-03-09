@@ -1,0 +1,28 @@
+.Collapsible {
+    border: green solid 4px;
+    background-color: #2f0c74;
+}
+
+.Collapsible__contentOuter {
+    background-color: #263c57;
+    color: #bbb327;
+}
+
+.Collapsible__trigger {
+    font-size: 30pt;
+    cursor: pointer;
+}
+
+.back {
+    font-size: x-large;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.portal {
+    width: 100px;
+}

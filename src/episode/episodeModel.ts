@@ -6,5 +6,4 @@ export default interface EpisodeModel {
 	air_date: string
 	episode: string
 	characters: CharacterModel[]
-	created: String
 }

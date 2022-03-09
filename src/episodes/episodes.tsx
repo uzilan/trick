@@ -3,10 +3,10 @@ import { useState } from "react";
 import EpisodeModel from "../episode/episodeModel";
 import "./episodes.css"
 import EpisodesView from "./episodesView";
+import { range } from "lodash";
 
-const episodesQuery = gql`
-    query episodes {
-        page1: episodes(page: 1) {
+const q = range(1, 4).map(x => `
+       page${x}: episodes(page: ${x}) {
             info{
                 count, pages, next, prev
             }
@@ -15,29 +15,11 @@ const episodesQuery = gql`
                     id, name, image
                 }
             }
-        },
-        page2: episodes(page: 2) {
-            info{
-                count, pages, next, prev
-            }
-            results {
-                id, name, air_date, episode, characters {
-                    id, name, image
-                }
-            }
-        },
-        page3: episodes(page: 3) {
-            info{
-                count, pages, next, prev
-            }
-            results {
-                id, name, air_date, episode, characters {
-                    id, name, image
-                }
-            }
-        },
-    }
-`
+        }
+`).join(",")
+
+const episodesQuery = gql`query episodes {${q}}`
+
 export default function Episodes() {
 
 	const [episodes, setEpisodes] = useState<EpisodeModel[]>([])

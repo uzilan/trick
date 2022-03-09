@@ -1,5 +1,5 @@
-import Episode from "../episode/episodeModel";
 import EpisodeModel from "../episode/episodeModel";
+import LocationModel from "../location/locationModel";
 
 export default interface CharacterModel {
 	id: number
@@ -8,8 +8,8 @@ export default interface CharacterModel {
 	species: string
 	type: string
 	gender: string
-	// origin: Location
-	// location: Location
+	origin: LocationModel
+	location: LocationModel
 	image: string
 	episode: EpisodeModel[]
 }

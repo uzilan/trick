@@ -1,0 +1,24 @@
+
+.meeseeks-wrapper {
+    font-size: x-large;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.meeseeks {
+    width: 100px;
+}
+
+.meeseeks-search {
+    width: 200px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.search-wrapper {
+    display: inline-flex;
+}

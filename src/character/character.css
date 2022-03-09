@@ -1,0 +1,8 @@
+.character-wrapper {
+    display: inline-flex;
+}
+
+.character-info {
+    padding: 10px;
+}
+

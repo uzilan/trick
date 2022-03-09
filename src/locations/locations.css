@@ -1,0 +1,14 @@
+.locations-list {
+    padding-top: 10px;
+    display: flex;
+    overflow-x: scroll;
+    width: calc(100vw);
+}
+
+.type {
+    text-align: left;
+}
+
+.location-type {
+    min-width: 170px;
+}

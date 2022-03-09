@@ -9,6 +9,12 @@ const characterQuery = gql`
             id, name, status, species, type, gender, image,
             episode {
                 id, name, episode
+            },
+            origin {
+                id, name
+            }
+            location {
+                id, name
             }
         }
     }
