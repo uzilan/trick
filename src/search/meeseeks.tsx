@@ -12,7 +12,7 @@ export default function Meeseeks() {
 	return (
 		<div className="meeseeks-wrapper">
 			<Link to="/search">
-				<img src={require("../images/meeseeks.png")} alt="search"
+				<img src={require("../images/meeseeks.png")} alt="search" title="search"
 				     className="meeseeks"/>
 			</Link>
 		</div>

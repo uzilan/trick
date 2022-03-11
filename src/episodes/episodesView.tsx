@@ -22,7 +22,9 @@ export default function EpisodesView({ episodes }: Props) {
 			</li>)
 		return (
 			<div>
-				{pair.season}
+				<div className="season-header">
+					{pair.season}
+				</div>
 				<ul className="season">
 					{eps}
 				</ul>

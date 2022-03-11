@@ -6,3 +6,8 @@
 .season {
     text-align: left;
 }
+
+.season-header {
+    font-size: larger;
+    font-weight: bolder;
+}

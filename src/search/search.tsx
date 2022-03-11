@@ -19,6 +19,18 @@ export default function Search() {
 		)
 	}
 
+	function searchName(name: string) {
+		setResults(<SearchCharacter name={name} status="" species="" type="" gender=""/>)
+	}
+
+	function searchSpecies(species: string) {
+		setResults(<SearchCharacter name="" status="" species={species} type="" gender=""/>)
+	}
+
+	function searchType(type: string) {
+		setResults(<SearchCharacter name="" status="" species="" type={type} gender=""/>)
+	}
+
 	function reset() {
 		setResults(null)
 	}
@@ -29,20 +41,20 @@ export default function Search() {
 				<img src={require("../images/meeseeks.png")} alt="search"
 				     className="meeseeks-search"/>
 				<form onSubmit={searchCharacter} onReset={reset}>
-					<p className="left">Search character</p>
+					<p className="left"><h1>Search character</h1></p>
 					<table>
 						<tbody>
 						<tr>
 							<td>name:</td>
-							<td><input name="name" placeholder="Rick"/></td>
+							<td><input name="name" placeholder="e.g. Rick"/></td>
 						</tr>
 						<tr>
 							<td>species:</td>
-							<td><input name="species" placeholder="Alien"/></td>
+							<td><input name="species" placeholder="e.g. Alien"/></td>
 						</tr>
 						<tr>
 							<td>type:</td>
-							<td><input name="type" placeholder="Fish"/></td>
+							<td><input name="type" placeholder="e.g. Fish"/></td>
 						</tr>
 						<tr>
 							<td>status:</td>
@@ -69,6 +81,15 @@ export default function Search() {
 						<button type={"reset"} className="right">reset</button>
 						<button type={"submit"} className="right">search</button>
 					</p>
+					<a href="javascript:void(0)" onClick={() => searchName("rick")}>Ricks</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("morty")}>Mortys</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("summer")}>Summers</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("beth")}>Beths</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("jerry")}>Jerrys</a>,<br/>
+					<a href="javascript:void(0)" onClick={() => searchSpecies("alien")}>Aliens</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("person")}>Persons</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("scarecrow")}>Scarecrows</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchType("monogatron")}>Monogatrons</a>,&nbsp;
 				</form>
 			</div>
 			{results}

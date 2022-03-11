@@ -5,5 +5,13 @@
 }
 
 .character {
-    padding-right: 5px;
+    padding-right: 15px;
+}
+
+.character-preview {
+    border: outset #65763D 5px;
+}
+
+.character-preview-wrapper {
+    padding-top: 15px;
 }

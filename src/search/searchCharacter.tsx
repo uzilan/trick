@@ -2,7 +2,6 @@ import { gql, useQuery } from "@apollo/client";
 import CharactersView from "../characters/charactersView";
 import React from "react";
 
-
 const characterQuery = gql`
     query Characters($filter: FilterCharacter) {
         characters(filter: $filter) {

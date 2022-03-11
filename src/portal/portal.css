@@ -1,16 +1,17 @@
 .Collapsible {
-    border: green solid 4px;
-    background-color: #2f0c74;
+    border: black solid 4px;
+    background-color: #65763D;
 }
 
 .Collapsible__contentOuter {
     background-color: #263c57;
-    color: #bbb327;
+    color: #CAB796;
 }
 
 .Collapsible__trigger {
     font-size: 30pt;
     cursor: pointer;
+    color: #CAB796;
 }
 
 .back {
@@ -25,4 +26,8 @@
 
 .portal {
     width: 100px;
+}
+
+.collaps-wrapper {
+    border: solid #83653B 2px;
 }

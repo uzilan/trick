@@ -12,9 +12,9 @@ export default function CharacterPreview({ character }: Props) {
 
 		<div key={character.id} className="character">
 			<Link to={`/character/${character.id}`}>
-				<p>
-					<img src={character.image} alt={character.name}/>
-				</p>
+				<div className="character-preview-wrapper">
+					<img src={character.image} alt={character.name} className="character-preview"/>
+				</div>
 				<p>
 					{character.name}
 				</p>

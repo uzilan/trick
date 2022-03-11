@@ -12,7 +12,7 @@ export default function Back() {
 		<div className="back">
 			<Link to="/portal">
 				<img src={require("../images/portal.png")} alt="back through the portal"
-				     className="portal"/>
+				     title="back through the portal" className="portal"/>
 			</Link>
 		</div>
 	)

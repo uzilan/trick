@@ -2,6 +2,7 @@ import CharacterModel from "./characterModel";
 import "./character.css"
 import { Link } from "react-router-dom";
 import EpisodesView from "../episodes/episodesView";
+import LocationModel from "../location/locationModel";
 
 interface Props {
 	characterModel: CharacterModel
@@ -9,11 +10,25 @@ interface Props {
 
 export default function CharacterView({ characterModel }: Props) {
 
+	function location(location: LocationModel) {
+		if (location.name === "unknown") {
+			return location.name
+		}
+
+		return (
+			<Link to={`/location/${location.id}`}>
+				{location.name}
+			</Link>
+		)
+	}
+
 	return (
 		<div>
 
 			<div className="character-wrapper">
-				<img src={characterModel.image} alt={characterModel.name}/>
+				<div className="character-preview-wrapper">
+					<img src={characterModel.image} alt={characterModel.name} className="character-preview"/>
+				</div>
 				<div className="character-info">
 					<table className="center">
 						<tbody>
@@ -43,19 +58,11 @@ export default function CharacterView({ characterModel }: Props) {
 						</tr>
 						<tr>
 							<td>origin:</td>
-							<td>
-								<Link to={`/location/${characterModel.origin.id}`}>
-									{characterModel.origin.name}
-								</Link>
-							</td>
+							<td>{location(characterModel.origin)}</td>
 						</tr>
 						<tr>
 							<td>location:</td>
-							<td>
-								<Link to={`/location/${characterModel.location.id}`}>
-									{characterModel.location.name}
-								</Link>
-							</td>
+							<td>{location(characterModel.location)}</td>
 						</tr>
 						</tbody>
 					</table>

@@ -34,18 +34,19 @@ export default function Characters() {
 		setChars(data.characters.results)
 	}
 
-	return (
-		<CharactersView characters={chars} showNext={true} next={() => {
-			fetchMore({
-					variables: {
-						page: data.characters.info.next,
-					},
+	function next() {
+		fetchMore({
+				variables: {
+					page: data.characters.info.next,
 				},
-			).then(newData => {
-				const results = newData as ApolloQueryResult<any>
-				setChars([...chars, ...results.data.characters.results])
-			})
-		}}
-		/>
+			},
+		).then(newData => {
+			const results = newData as ApolloQueryResult<any>
+			setChars([...chars, ...results.data.characters.results])
+		})
+	}
+
+	return (
+		<CharactersView characters={chars} showNext={true} next={next}/>
 	)
 }

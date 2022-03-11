@@ -6,3 +6,6 @@
     padding: 10px;
 }
 
+.character-preview {
+    border: outset #65763D 5px;
+}

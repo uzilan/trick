@@ -1,5 +1,5 @@
 html {
-    background-color: #263c57;
+    background-color: #1E3E48;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #263c57;
+    background-color: #1E3E48;
     color: #bbb327;
 }
 
@@ -26,5 +26,8 @@ button {
 }
 
 a {
-    color: #39d5e3;
+    color: #5DB4D8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
 }

@@ -7,15 +7,21 @@ import "./portal.css"
 export default function Portal() {
 	return (
 		<div>
-			<Collapsible trigger="Characters" open={true}>
-				<Characters/>
-			</Collapsible>
-			<Collapsible trigger="Episodes">
-				<Episodes/>
-			</Collapsible>
-			<Collapsible trigger="Locations">
-				<Locations/>
-			</Collapsible>
+			<div className="collaps-wrapper">
+				<Collapsible trigger="Characters" open={true}>
+					<Characters/>
+				</Collapsible>
+			</div>
+			<div className="collaps-wrapper">
+				<Collapsible trigger="Episodes">
+					<Episodes/>
+				</Collapsible>
+			</div>
+			<div className="collaps-wrapper">
+				<Collapsible trigger="Locations">
+					<Locations/>
+				</Collapsible>
+			</div>
 		</div>
 	)
 }
