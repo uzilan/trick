@@ -30,16 +30,8 @@ export default function Locations() {
 	if (error) return <p>Error :(</p>;
 
 	if (locations.length === 0) {
-		let allResults = [
-			...data.page1.results,
-			...data.page2.results,
-			...data.page3.results,
-			...data.page4.results,
-			...data.page5.results,
-			...data.page6.results,
-			...data.page7.results,
-		];
-
+		let allResults = Object.values(data).reduce((acc: any, res: any) =>
+			acc.concat(res.results), []) as LocationModel[];
 		setLocations(allResults);
 	}
 

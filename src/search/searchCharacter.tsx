@@ -14,9 +14,6 @@ const characterQuery = gql`
         }
     }`
 
-function noNext() {
-}
-
 interface Props {
 	name: string
 	status: string
@@ -42,6 +39,6 @@ export default function SearchCharacter({ name, status, species, type, gender }:
 	if (error) return <p>Not found</p>;
 
 	return (
-		<CharactersView characters={data.characters.results} showNext={false} next={noNext}/>
+		<CharactersView characters={data.characters.results}/>
 	)
 }

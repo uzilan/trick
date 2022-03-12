@@ -6,8 +6,6 @@ interface Props {
 }
 
 export default function LocationView({ locationModel }: Props) {
-	function noNext() {
-	}
 
 	return (
 		<div key={locationModel.id} className="center">
@@ -26,7 +24,7 @@ export default function LocationView({ locationModel }: Props) {
 					</tbody>
 				</table>
 			</div>
-			<CharactersView characters={locationModel.residents} next={noNext} showNext={false}/>
+			<CharactersView characters={locationModel.residents} />
 		</div>
 	)
 }

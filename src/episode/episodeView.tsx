@@ -7,8 +7,6 @@ interface Props {
 
 
 export default function EpisodeView({ episodeModel }: Props) {
-	function noNext() {
-	}
 
 	return (
 		<div key={episodeModel.id}>
@@ -27,7 +25,7 @@ export default function EpisodeView({ episodeModel }: Props) {
 					</tbody>
 				</table>
 			</div>
-			<CharactersView characters={episodeModel.characters} next={noNext} showNext={false}/>
+			<CharactersView characters={episodeModel.characters}/>
 		</div>
 	)
 }

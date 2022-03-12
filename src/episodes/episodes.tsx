@@ -30,12 +30,8 @@ export default function Episodes() {
 	if (error) return <p>Error :(</p>;
 
 	if (episodes.length === 0) {
-		let allResults = [
-			...data.page1.results,
-			...data.page2.results,
-			...data.page3.results,
-		];
-
+		let allResults = Object.values(data).reduce((acc: any, res: any) =>
+			acc.concat(res.results), []) as EpisodeModel[];
 		setEpisodes(allResults);
 	}
 
