@@ -9,6 +9,7 @@ import Location from "./location/location";
 import Back from "./portal/back";
 import Meeseeks from "./search/meeseeks";
 import Search from "./search/search";
+import Device from "./device/device";
 
 function App() {
 	useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
 					</nav>
 				</div>
 				<Meeseeks/>
+				<Device/>
 				<Back/>
 			</Router>
 		</div>
