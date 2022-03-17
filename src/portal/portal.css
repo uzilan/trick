@@ -25,7 +25,11 @@
 }
 
 .portal {
-    width: 100px;
+    width: 70px;
+}
+
+img:active {
+    transform:  rotateY(180deg);
 }
 
 .collaps-wrapper {

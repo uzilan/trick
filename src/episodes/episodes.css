@@ -1,6 +1,8 @@
 .episodes-list {
     padding-top: 10px;
     display: inline-flex;
+    overflow-x: scroll;
+    width: calc(100vw);
 }
 
 .season {

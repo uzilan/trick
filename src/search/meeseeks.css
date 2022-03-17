@@ -10,15 +10,23 @@
 }
 
 .meeseeks {
-    width: 100px;
+    width: 50px;
 }
 
 .meeseeks-search {
-    width: 200px;
+    width: 165px;
     text-align: left;
     padding-right: 20px;
 }
 
 .search-wrapper {
     display: inline-flex;
+}
+
+input {
+    width: 100px
+}
+
+select {
+    width: 109px
 }

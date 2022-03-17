@@ -77,19 +77,19 @@ export default function Search() {
 						</tbody>
 					</table>
 
-					<p className="right">
+					<p className="center">
 						<button type={"reset"} className="right">reset</button>
 						<button type={"submit"} className="right">search</button>
 					</p>
 					<a href="javascript:void(0)" onClick={() => searchName("rick")}>Ricks</a>,&nbsp;
 					<a href="javascript:void(0)" onClick={() => searchName("morty")}>Mortys</a>,&nbsp;
-					<a href="javascript:void(0)" onClick={() => searchName("summer")}>Summers</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("summer")}>Summers</a>,<br/>
 					<a href="javascript:void(0)" onClick={() => searchName("beth")}>Beths</a>,&nbsp;
-					<a href="javascript:void(0)" onClick={() => searchName("jerry")}>Jerrys</a>,<br/>
-					<a href="javascript:void(0)" onClick={() => searchSpecies("alien")}>Aliens</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("jerry")}>Jerrys</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchSpecies("alien")}>Aliens</a>,<br/>
 					<a href="javascript:void(0)" onClick={() => searchName("person")}>Persons</a>,&nbsp;
-					<a href="javascript:void(0)" onClick={() => searchName("scarecrow")}>Scarecrows</a>,&nbsp;
-					<a href="javascript:void(0)" onClick={() => searchType("monogatron")}>Monogatrons</a>,&nbsp;
+					<a href="javascript:void(0)" onClick={() => searchName("scarecrow")}>Scarecrows</a>,<br/>
+					<a href="javascript:void(0)" onClick={() => searchType("monogatron")}>Monogatrons</a>
 				</form>
 			</div>
 			{results}
