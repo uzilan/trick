@@ -2,7 +2,7 @@
     font-size: x-large;
     position: fixed;
     bottom: 0;
-    right: calc(50vw);
+    right: calc(50% - 70px);
     width: 70px;
     padding-right: 40px;
     padding-bottom: 20px;
