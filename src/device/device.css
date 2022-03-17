@@ -1,0 +1,14 @@
+.device-wrapper {
+    font-size: x-large;
+    position: fixed;
+    bottom: 0;
+    right: calc(50vw);
+    width: 70px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.device {
+    width: 100px;
+    cursor: pointer
+}
